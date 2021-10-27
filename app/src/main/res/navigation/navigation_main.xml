@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_main"
-    app:startDestination="@id/createTodoFragment">
+    app:startDestination="@id/todoListFragment">
 
     <fragment
         android:id="@+id/createTodoFragment"
@@ -14,7 +14,7 @@
         android:id="@+id/todoListFragment"
         android:name="ac.id.ubaya.todoapp.view.TodoListFragment"
         android:label="fragment_todo_list"
-        tools:layout="@layout/fragment_todo_list" >
+        tools:layout="@layout/fragment_todo_list">
         <action
             android:id="@+id/actionCreateTodo"
             app:destination="@id/createTodoFragment"
@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/editTodoFragment"
         android:name="ac.id.ubaya.todoapp.view.EditTodoFragment"
-        android:label="EditTodoFragment" >
+        android:label="EditTodoFragment">
         <argument
             android:name="uuid"
             app:argType="integer" />

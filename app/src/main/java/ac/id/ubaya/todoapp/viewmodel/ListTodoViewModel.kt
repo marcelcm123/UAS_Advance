@@ -27,19 +27,14 @@ class ListTodoViewModel(application: Application)
         todoLoadErrorLD.value = false
         launch {
             val db = buildDb(getApplication())
-
             todoLD.value = db.todoDao().selectAllTodo()
         }
     }
 
     fun clearTask(todo: Todo) {
         launch {
-            val db = Room.databaseBuilder(
-                getApplication(),
-                TodoDatabase::class.java, "newtododb"
-            ).build()
+            val db = buildDb(getApplication())
             db.todoDao().deleteTodo(todo)
-
             todoLD.value = db.todoDao().selectAllTodo()
         }
     }
