@@ -30,16 +30,10 @@ class DetailTodoViewModel(application: Application)
             todoLD.value =  db.todoDao().selectTodo(uuid)
         }
     }
-    fun update(title:String, notes:String, priority:Int, uuid:Int) {
+    fun updateTodo(title:String, notes:String, priority:Int, uuid:Int) {
         launch {
             val db = buildDb(getApplication())
             db.todoDao().update(title, notes, priority, uuid)
-        }
-    }
-    fun done(uuid: Int){
-        launch{
-            val db = buildDb(getApplication())
-            db.todoDao().doneChange(uuid)
         }
     }
 

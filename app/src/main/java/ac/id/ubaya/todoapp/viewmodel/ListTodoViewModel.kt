@@ -34,7 +34,7 @@ class ListTodoViewModel(application: Application)
     fun clearTask(todo: Todo) {
         launch {
             val db = buildDb(getApplication())
-            db.todoDao().deleteTodo(todo)
+            db.todoDao().todoDone(todo.uuid)
             todoLD.value = db.todoDao().selectAllTodo()
         }
     }
