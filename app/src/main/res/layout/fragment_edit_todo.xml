@@ -103,15 +103,16 @@
             <RadioButton
                 android:id="@+id/radioHigh"
                 android:onClick="@{(view)->radioListener.onRadioClick(view,3, todo)}"
+                android:checked="@{todo.priority==3?true:false}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:tag="3"
                 android:text="High Priority" />
 
             <RadioButton
                 android:id="@+id/radioMedium"
                 android:onClick="@{(view)->radioListener.onRadioClick(view,2, todo)}"
+                android:checked="@{todo.priority==2?true:false}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="2"
@@ -120,6 +121,7 @@
             <RadioButton
                 android:id="@+id/radioLow"
                 android:onClick="@{(view)->radioListener.onRadioClick(view,1, todo)}"
+                android:checked="@{todo.priority==1?true:false}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="1"
