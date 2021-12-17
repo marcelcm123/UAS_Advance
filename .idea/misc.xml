@@ -6,8 +6,11 @@
         <entry key="..\:/Project Android/TodoApp/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
         <entry key="..\:/Project Android/TodoApp/app/src/main/res/layout/fragment_create_todo.xml" value="0.2604166666666667" />
         <entry key="..\:/Project Android/TodoApp/app/src/main/res/layout/fragment_edit_todo.xml" value="0.266304347826087" />
+        <entry key="..\:/Project Android/TodoApp/app/src/main/res/layout/fragment_index_fragment.xml" value="0.26268115942028986" />
+        <entry key="..\:/Project Android/TodoApp/app/src/main/res/layout/fragment_profile.xml" value="0.26268115942028986" />
         <entry key="..\:/Project Android/TodoApp/app/src/main/res/layout/fragment_todo_list.xml" value="0.26992753623188404" />
         <entry key="..\:/Project Android/TodoApp/app/src/main/res/layout/todo_item_layout.xml" value="0.26992753623188404" />
+        <entry key="..\:/Project Android/TodoApp/app/src/main/res/menu/bottom_menu.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

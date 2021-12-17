@@ -9,7 +9,11 @@
         android:id="@+id/createTodoFragment"
         android:name="ac.id.ubaya.todoapp.view.CreateTodoFragment"
         android:label="fragment_create_todo"
-        tools:layout="@layout/fragment_create_todo" />
+        tools:layout="@layout/fragment_create_todo" >
+        <action
+            android:id="@+id/action_createTodoFragment_to_index_fragment"
+            app:destination="@id/index_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/todoListFragment"
         android:name="ac.id.ubaya.todoapp.view.TodoListFragment"
@@ -23,6 +27,12 @@
         <action
             android:id="@+id/actionEditTodoFragment"
             app:destination="@id/editTodoFragment" />
+        <action
+            android:id="@+id/action_todoListFragment_to_index_fragment"
+            app:destination="@id/index_fragment" />
+        <action
+            android:id="@+id/action_todoListFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/editTodoFragment"
@@ -31,5 +41,30 @@
         <argument
             android:name="uuid"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/index_fragment"
+        android:name="ac.id.ubaya.todoapp.view.index_fragment"
+        android:label="index_fragment" >
+        <action
+            android:id="@+id/action_index_fragment_to_todoListFragment"
+            app:destination="@id/todoListFragment" />
+        <action
+            android:id="@+id/action_index_fragment_to_createTodoFragment"
+            app:destination="@id/createTodoFragment" />
+        <action
+            android:id="@+id/action_index_fragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ac.id.ubaya.todoapp.view.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_index_fragment"
+            app:destination="@id/index_fragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_todoListFragment"
+            app:destination="@id/todoListFragment" />
     </fragment>
 </navigation>
